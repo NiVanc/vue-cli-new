@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <h2>{{ url }}</h2>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
       check out the
@@ -89,6 +90,11 @@
 <script>
 export default {
   name: "HelloWorld",
+  data() {
+    return {
+      url: process.env.VUE_APP_URL
+    };
+  },
   props: {
     msg: String
   }
